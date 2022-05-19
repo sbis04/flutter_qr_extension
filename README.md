@@ -1,16 +1,55 @@
-# qr_code_extension
+# Flutter QR code generator - Chrome extension
 
-A new Flutter project.
+Chrome extension created using Flutter for generating QR code from either a text or URL. The QR code's background and foreground colors are also customizable.
 
-## Getting Started
+![Chrome extension in action](screenshots/qr-code-ext-demo.gif)
 
-This project is a starting point for a Flutter application.
+## Usage
 
-A few resources to get you started if this is your first Flutter project:
+To use this project as a Chrome extension, follow the steps below:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Clone this project using:
+   
+    ```sh
+    git clone https://github.com/sbis04/flutter_qr_extension.git
+    ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2. From the project directory, run:
+   
+   ```sh
+   flutter build web --web-renderer html --csp
+   ```
+
+3. Go to the following URL from Chrome browser:
+   
+   ```url
+   chrome://extensions
+   ```
+
+4. Enable the **Developer mode**.
+
+5. Click **Load unpacked**. Select the `<project_dir>/build/web` folder.
+
+This will install the extension to your Chrome browser and then you will be able to access the extension by clicking on the **extension icon**.
+
+## License
+
+Copyright (c) 2022 Souvik Biswas
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
