@@ -39,11 +39,16 @@ class _QRViewState extends State<QRView> {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(16),
-              child: QrImage(
+              child: QrImageView(
                 data: qrText,
                 padding: const EdgeInsets.all(16),
                 backgroundColor: qrBackgroundColors[qrBackgroundColorIndex],
-                foregroundColor: qrColors[qrColorIndex],
+                eyeStyle: QrEyeStyle(
+                  color: qrColors[qrColorIndex]
+                ),
+                dataModuleStyle: QrDataModuleStyle(
+                    color: qrColors[qrColorIndex]
+                ),
               ),
             ),
             Expanded(
